@@ -29,6 +29,7 @@ The `prepare` step is crucial which step we will check which pipline should we r
 - If another flag is set, the corresponding pipeline will be enabled
 
 {% raw %}
+
 ```yaml
 prepare:
     runs-on: ubuntu-latest
@@ -48,41 +49,42 @@ prepare:
         if: "${{ env.ECR_USERNAME != '' }}"
         run: echo "ENABLED=true" >> $GITHUB_OUTPUT
 ```
+
 {% endraw %}
 
 Each pipeline must have a condition to determine whether the pipeline should be executed or skipped, depending on value of the enabled flag. This is easily using an `if` condition in each job within Github Action
 
 {% raw %}
+
 ```yaml
 dockerhub:
-    runs-on: ubuntu-latest
-    needs: [prepare]
-    if: ${{ needs.prepare.outputs.ENABLED_DOCKERHUB == 'true' }} # <- where you tell Github Action whether we we let it run or not
-    steps:
-        - uses: actions/checkout@v1
-        - ...
-        
+  runs-on: ubuntu-latest
+  needs: [prepare]
+  if: ${{ needs.prepare.outputs.ENABLED_DOCKERHUB == 'true' }} # <- where you tell Github Action whether we we let it run or not
+  steps:
+    - uses: actions/checkout@v1
+    - ...
+
 ecr:
-    runs-on: ubuntu-latest
-    needs: [prepare]
-    if: ${{ needs.prepare.outputs.ENABLED_ECR == 'true' }} # <- where you tell Github Action whether we we let it run or not
-    steps:
-        - uses: actions/checkout@v1
-        - ...
+  runs-on: ubuntu-latest
+  needs: [prepare]
+  if: ${{ needs.prepare.outputs.ENABLED_ECR == 'true' }} # <- where you tell Github Action whether we we let it run or not
+  steps:
+    - uses: actions/checkout@v1
+    - ...
 ```
+
 {% endraw %}
 
 ## Limitations
 
-If we need to run too many pipelines (> 2 pipelines), you can find there is resource wasting at the workflow I have shown you. Because we need to run seperated job for different registry, we end up with run docker build multiple time. You can improve it by run only one job, set the flag to environment variable and check it at the step of push image to registry. But you can not reuse pre-defined actions from Github Actions Marketplace. 
+If we need to run too many pipelines (> 2 pipelines), you can find there is resource wasting at the workflow I have shown you. Because we need to run seperated job for different registry, we end up with run docker build multiple time. You can improve it by run only one job, set the flag to environment variable and check it at the step of push image to registry. But you can not reuse pre-defined actions from Github Actions Marketplace.
 
 In my case, they are [docker/build-push-action](https://github.com/docker/build-push-action) and [aws-actions/amazon-ecr-login](https://github.com/aws-actions/amazon-ecr-login)
 
-
 > Be cautious when you decided to manage credentials of registry by yourself cause there is a risk of them leaking in Github Action logs
-{: .prompt-warning }
-
+> {: .prompt-warning }
 
 ## Bonus
 
-Full version of Github Action file is placed on my open source project. You can find it at [Scraphook - The fast, secure, and efficient webhook service ](https://github.com/scrapnode/scraphook/blob/master/.github/workflows/master.yaml)
+Full version of Github Action file is placed on my open source project. You can find it at [Scraphook - The fast, secure, and efficient webhook service ](https://github.com/kanthorlabs/scraphook/blob/master/.github/workflows/master.yaml)

@@ -1,5 +1,6 @@
 # Tuan Nguyen Blog
-> Tell you a story about a nerd who is always curios about engineering things 
+
+> Tell you a story about a nerd who is always curios about engineering things
 
 Hello everyone, I am Tuan Nguyen, a Vietnamese developer. In this blog, I am seeking assistance with my weaknesses and offering help with my strengths.
 
@@ -16,4 +17,4 @@ Hello everyone, I am Tuan Nguyen, a Vietnamese developer. In this blog, I am see
 
 ## How do you contact me?
 
-You can check my curriculum vitae at [Tuan Nguyen - Fullstack Developer](https://tuannguyen.scrapnode.com/)
+You can check my curriculum vitae at [Tuan Nguyen - Fullstack Developer](https://tuannguyen.kanthorlabs.com/)
