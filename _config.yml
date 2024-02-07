@@ -31,7 +31,7 @@ github:
   username: kanthorlabs # change to your github username
 
 twitter:
-  username: buglungtung # change to your twitter username
+  username: kanthorlabs # change to your twitter username
 
 social:
   # Change to your full name.
@@ -41,7 +41,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/kanthorlabs # change to your github homepage
-    # - https://twitter.com/buglungtung # change to your twitter homepage
+    - https://twitter.com/kanthorlabs # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/tuannguyen1993
