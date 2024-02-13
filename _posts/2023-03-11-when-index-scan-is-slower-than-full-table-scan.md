@@ -8,13 +8,13 @@ tags: [database]
 Yesterday, I woke up early, as I do on many other days, and performed some checks on an alert system. While some alerts were annoying, a critical one appeared right in front of me - a SQL query that examined the entire table, retrieving ONLY 8 rows! Here is the log containing some information I obtained, but I've omitted certain details for privacy reasons.
 
 ```
-# Query_time: 11.676028  
-# Lock_time: 0.000002 
+# Query_time: 11.676028
+# Lock_time: 0.000002
 # Rows_sent: 8  Rows_examined: 2276066
 use production;
 SET timestamp=1684378801;
 SELECT p.user_id
-FROM products AS p   
+FROM products AS p
 WHERE p.active
 GROUP BY p.user_id;
 ```
@@ -25,13 +25,13 @@ Ah, something unusual was happening. I quickly grabbed my coffee and began a mor
 
 ## Preparing
 
-- The SQL database I am working with is MySQL version  8.0.28
+- The SQL database I am working with is MySQL version 8.0.28
 - The table size at the time I performed my check was
 
-    ```SQL
-    SELECT count(id) FROM products
-    -- count(id): 2281099
-    ```
+  ```SQL
+  SELECT count(id) FROM products
+  -- count(id): 2281099
+  ```
 
 ## Explain the query
 
@@ -39,27 +39,27 @@ First of all, to ensure that the SQL query utilized the index on column `p.user_
 
 ```SQL
 EXPLAIN SELECT p.user_id
-FROM products AS p   
+FROM products AS p
 WHERE p.active
 GROUP BY p.user_id;
-``` 
+```
 
 And I obtained the output in the format specified by [MySQL Explain Output](https://dev.mysql.com/doc/refman/8.0/en/explain-output.html)
 
 ```json
 {
-  "id" : 1,
-  "select_type" : "SIMPLE",
-  "table" : "p",
-  "partitions" : null,
-  "type" : "index",
-  "possible_keys" : "IX_products_user_id",
-  "key" : "IX_products_user_id",
-  "key_len" : "146",
-  "ref" : null,
-  "rows" : 2252020,
-  "filtered" : 90.0,
-  "Extra" : "Using where"
+  "id": 1,
+  "select_type": "SIMPLE",
+  "table": "p",
+  "partitions": null,
+  "type": "index",
+  "possible_keys": "IX_products_user_id",
+  "key": "IX_products_user_id",
+  "key_len": "146",
+  "ref": null,
+  "rows": 2252020,
+  "filtered": 90.0,
+  "Extra": "Using where"
 }
 ```
 
@@ -71,10 +71,10 @@ To obtain a better understanding of what the database has done with the data, I 
 
 ```SQL
 EXPLAIN ANALYZE SELECT p.user_id
-FROM products AS p   
+FROM products AS p
 WHERE p.active
 GROUP BY p.user_id;
-``` 
+```
 
 Then it took me approximately ... 15 seconds to obtain an explanation. Something is clearly going wrong with that query.
 
@@ -85,8 +85,8 @@ Then it took me approximately ... 15 seconds to obtain an explanation. Something
             -> Index scan on p using IX_products_user_id  (cost=1587.60 rows=37694) (actual time=38.097..37491.597 rows=2281100 loops=1)
 ```
 
-> Limit: 200 row(s) is what DBeaver added to my query by default and you can ignore it 
-{: .prompt-info }
+> Limit: 200 row(s) is what DBeaver added to my query by default and you can ignore it
+> {: .prompt-info }
 
 The output format `actual time=38.097..37491.597` indicates the time taken to retrieve the first row and the time taken to retrieve all rows. This outcome aligns with our expectations since we are fetching over two million rows. However, it is not desirable, as we anticipated a faster execution time considering the use of an index. Taking more than 15 seconds to fetch rows with an index is indeed suboptimal.
 
@@ -102,11 +102,11 @@ Interestingly, this situation reminds you of a book I read a long time ago calle
 
 We will explain everything without utilizing the index on the column `p.user_id`. After did some googling, I found a method to disable or ignore the index, as discussed on [StackExchange](https://dba.stackexchange.com/a/110713)
 
-Explain: 
+Explain:
 
 ```SQL
 EXPLAIN SELECT p.user_id
-FROM products AS p   
+FROM products AS p USE INDEX ()
 WHERE p.active
 GROUP BY p.user_id;
 
@@ -124,14 +124,14 @@ GROUP BY p.user_id;
 --   "filtered" : 90.0,
 --   "Extra" : "Using where; Using temporary"
 -- }
-``` 
+```
 
 Explain Analyze:
 
 ```SQL
 EXPLAIN ANALYZE SELECT p.user_id
-FROM products AS p USE INDEX ()      
-WHERE p.active 
+FROM products AS p USE INDEX ()
+WHERE p.active
 GROUP BY p.user_id;
 
 -- -> Limit: 200 row(s)  (cost=446934.14..446936.62 rows=200) (actual time=1152.400..1152.402 rows=8 loops=1)
@@ -161,7 +161,7 @@ Why aren't we using `DISTINCT` in this case? And here is the explanation for thi
 ```SQL
 EXPLAIN ANALYZE SELECT DISTINCT p.user_id
 FROM products AS p
-WHERE p.active 
+WHERE p.active
 
 -> Limit: 200 row(s)  (cost=446934.71..446937.19 rows=200) (actual time=1151.773..1151.775 rows=8 loops=1)
     -> Table scan on <temporary>  (cost=0.01..25337.83 rows=2026827) (actual time=0.002..0.003 rows=8 loops=1)
@@ -170,4 +170,3 @@ WHERE p.active
                 -> Filter: (0 <> p.active)  (cost=244252.00 rows=2026827) (actual time=0.286..1150.798 rows=825 loops=1)
                     -> Table scan on p  (cost=244252.00 rows=2252030) (actual time=0.074..1020.530 rows=2281108 loops=1)
 ```
-
