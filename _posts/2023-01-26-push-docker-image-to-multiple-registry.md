@@ -1,5 +1,5 @@
 ---
-title: Push Docker image to multiple registry
+title: Push Docker image to multiple registries
 date: 2023-01-26 20:00:00 +0700
 categories: [DevOps, CICD]
 tags: [docker]
@@ -20,7 +20,7 @@ The solution is simple - push docker image to 2 diffrent registries: Docker Regi
 
 What we need here is 2 pipelines that run 2 different jobs to push 2 separate registries and some flags that let us know which pipline should be run (or we will run both of them). Here is the architecture we need to accomplish
 
-![multiple-registry-pipline](/assets/img/2023-01-26-multiple-registry-pipline.png)
+![multiple-registry-pipline](/assets/img/2023-01-26-multiple-registries-pipline.png)
 
 The `prepare` step is crucial which step we will check which pipline should we run (for example, I need to push image to DockerHub and ECR). The decision logic is straightforward:
 
