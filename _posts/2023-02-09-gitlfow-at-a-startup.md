@@ -1,7 +1,7 @@
 ---
 title: Gitflow at a startup
 date: 2023-02-09 21:15:00 +0700
-categories: [Git, Mangement]
+categories: [Mangement]
 tags: [gitflow]
 ---
 
@@ -15,7 +15,7 @@ Simpler requirement often leads to more complex implementations, which we have u
 We want to develop multiple features simultaneously and then chose which ones to release, while being able to change the release priority at any time.
 ```
 
-As a fast-growing startup, the developer team frequently receives change requests to align with our business goals. For example, we want to do R&D for feature A, implement a feature for one of our big merchants and fix a bug on production environment simultaneously. Initially, We decided prioritize the bug fix, followed by the R&D works, and end with merchant feature. However, we suddenly received a request to deliver the merchant feature first (or we die). Unfortunately, our code structure was organized to deliver the features in the previously defined order. Now we have to change it and that is a frustrating and painful process. 
+As a fast-growing startup, the developer team frequently receives change requests to align with our business goals. For example, we want to do R&D for feature A, implement a feature for one of our big merchants and fix a bug on production environment simultaneously. Initially, We decided prioritize the bug fix, followed by the R&D works, and end with merchant feature. However, we suddenly received a request to deliver the merchant feature first (or we die). Unfortunately, our code structure was organized to deliver the features in the previously defined order. Now we have to change it and that is a frustrating and painful process.
 
 To address these challenges, I have suggested a workflow that allows us develop and review our changes in multiple environments. This way, we can prioritize the order of feature releases when we are close to the deadline, and make any necessary changes without compromising the quality of out work.
 

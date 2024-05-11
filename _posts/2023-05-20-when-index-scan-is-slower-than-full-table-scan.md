@@ -1,7 +1,7 @@
 ---
 title: When index scan is slower than full table scan
 date: 2023-05-20 9:30:00 +0700
-categories: [SQL]
+categories: [Debugging]
 tags: [database]
 ---
 

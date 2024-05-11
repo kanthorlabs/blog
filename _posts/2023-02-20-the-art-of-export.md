@@ -2,7 +2,7 @@
 title: The art of Export
 date: 2023-02-20 21:00:00 +0700
 categories: [Solutioning]
-tags: [dataflow]
+tags: []
 ---
 
 Almost every system has a dataflow that involves exporting entities for various purposes. Having worked with these systems for eight years, I have encountered a variety of ways to implement them, but none have made me entirely satisfied. Some are easy to implement, but they don't perform well at larger scales, while others are effective solutions that work well at any data size, but are not straightforward. For example
