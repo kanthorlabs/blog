@@ -1,7 +1,7 @@
 ---
 title: The ID chosen
 date: 2023-03-11 10:30:00 +0700
-categories: [Solutioning]
+categories: [Solution]
 tags: [database]
 ---
 
@@ -36,7 +36,6 @@ However, you lose the ability to use the ID column to implement cursor paginatio
 ## The Snowflake ID
 
 After exploring both auto-incremented IDs and UUIDs, you may wonder if it's possible to generate unique IDs that reflect the order of creation based on timestamps, and do so easily in a distributed system. The answer is yes, thanks to the invention of the [Snowflake ID](https://en.wikipedia.org/wiki/Snowflake_ID) by Twitter. The Snowflake ID consists of two crucial parts: the first 41 bits represent a millisecond timestamp, and the last 10 bits represent a machine ID. Based on these parts, the order of the ID corresponds to the order of the record creation timestamps. With the Snowflake ID, you may have found the perfect ID for your system. However, you must maintain a unique set of machine IDs in your cluster, which can be challenging.
-
 
 ## My perfect ID
 

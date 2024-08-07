@@ -1,7 +1,7 @@
 ---
 title: The art of Import
 date: 2023-02-22 19:00:00 +0700
-categories: [Solutioning]
+categories: [Solution]
 tags: []
 ---
 
