@@ -1,8 +1,8 @@
 ---
 title: Push Docker image to multiple registries
 date: 2023-01-26 20:00:00 +0700
-categories: [DevOps, CICD]
-tags: [docker]
+categories: [DevOps]
+tags: [docker, cicd]
 ---
 
 I have been managing a [GitOps workflow](https://www.weave.works/technologies/gitops/) using Github Action and FluxCD for the past three years and everything has been running smoothy until Docker announced [new rate limit](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) that took effect on November 1, 2020. There are two important quotes:
