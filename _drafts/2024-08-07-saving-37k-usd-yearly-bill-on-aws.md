@@ -102,3 +102,5 @@ By adjusting our expectations and system requirements, and by utilizing self-hos
 It’s a win-win-win for us.
 
 Highlights: saving **3130 USD/month** or **37620 USD/year**
+
+It’s also worth noting that our UAT environment has been performing reliably for a year, with only three degraded events, each resolved within 30 minutes, and just 2 hours of downtime for maintenance. Interestingly, one of these degraded events was due to a low-disk issue. I never anticipated encountering that issue in our system before 😊.
