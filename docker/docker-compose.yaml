@@ -2,6 +2,6 @@ services:
   jekyll:
     build: .
     volumes:
-      - .:/site
+      - ..:/site
     ports:
       - '4000:4000'
