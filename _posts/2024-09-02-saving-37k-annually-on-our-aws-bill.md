@@ -5,7 +5,7 @@ categories: [DevOps]
 tags: [aws, self-hosted]
 ---
 
-**TL;DR**: I replaced AWS managed services with self-hosted solutions, resulting in a yearly savings of **$37620**.
+**TL;DR**: I replaced AWS managed services with self-hosted solutions on UAT environments, resulting in a yearly savings of **$37620**.
 
 ## A brief history of our infrastructure
 
