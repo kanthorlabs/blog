@@ -1,5 +1,5 @@
 ---
-title: Saving 37k USD yearly bill on AWS
+title: Saving $37K annually on our AWS bill
 date: 2024-09-02 16:00:00 +0700
 categories: [DevOps]
 tags: [aws, self-hosted]
