@@ -17,7 +17,15 @@ We were also aware that this decision was a temporary solution, providing us the
 
 Because the UAT infrastructure is the same as the one used in our Production environment, it also extends reliability, scalability, and maintainability. For example, adding compute resources to EKS (Elastic Kubernetes Service on AWS) requires just a few changes in Terraform files, and new nodes can be up and running in 3-5 minutes. Another good example is CloudWatch; with minimal configuration, logs are readily available for debugging issues.
 
-But do we really need the UAT environment to be as robust as the Production environment, especially considering the costs AWS charges for a non-critical setup? We agreed that perfection isn't necessary for the UAT environment, and the hardware costs were not justified. For example, the database can be down for a few minutes during maintenance, adding new compute can be slower if we manually spin up new nodes, and we could opt for an on-premise APM solution instead of the more expensive CloudWatch. It was time to start getting our hands dirty.
+When we evaluated our UAT infrastructure, we questioned whether we truly needed that level of scalability and maintainability. For instance, the traffic on the UAT environment is often stable and predictable, remaining idle most of the time until developers or QAs begin using it. Additionally, we agreed that some downtime is acceptable in the UAT environment, requiring only 99% uptime (or up to 180 hours of downtime per week). For observability, uptime requirements are even more flexible since we typically print exceptions directly to the container’s stdout and use kubectl to monitor logs during debugging sessions.
+
+Ultimately, we realized that minimizing costs could be achieved with a straightforward approach:
+
+- Reducing redundant resources, which cuts costs by half, though it also lowers availability.
+
+- Replacing AWS managed services with self-hosted alternatives, further halving expenses.
+
+- Implementing custom bash scripts for backup and restore processes, saving on backup operation and storage costs.
 
 ## EKS
 
