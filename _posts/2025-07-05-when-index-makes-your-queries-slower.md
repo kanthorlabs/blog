@@ -49,13 +49,13 @@ GROUP BY p.user_id;
 
 Before getting into the details, there’s an important statistic I want to share with you:
 
-[Storage Latency Stats](/assets/img/2025-07-05-storage-latency.png)
+![Storage Latency Stats](/assets/img/2025-07-05-storage-latency.png)
 
 The key takeaway is that RAM is 1,600 times faster than SSD. Why does this matter? Because one of the main goals of database optimization is to minimize disk I/O as much as possible.
 
 To achieve this, the database splits your data into small chunks: they are called blocks on disk and pages in memory. By breaking the data into smaller parts, the database can efficiently cache frequently accessed data in memory, which leads to better read performance. The following image shows a simplified version of the database storage structure.
 
-[Database Storage Structure](/assets/img/2025-07-05-database-storage-structure.jpg)
+![Database Storage Structure](/assets/img/2025-07-05-database-storage-structure.jpg)
 
 Whenever you query a row in a database, it first checks whether the requested data already exists in the buffer pool. If it doesn’t, the database needs to look it up in the file on disk. The problem is that the database has to find exactly where the block containing your data is located, it has to open the target file and navigate to the correct offset to retrieve the data. This process is costly because it requires multiple I/O operations to complete. This isn't a big issue when you only need a few I/O operations to retrieve some records compared to reading all the database files for the same amount of data.
 
