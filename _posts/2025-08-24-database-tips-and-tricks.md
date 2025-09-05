@@ -232,6 +232,18 @@ And you know what? The index sizes are nearly equal to the size of the table. Le
 
 ![index-size](/assets/img/2025-08-24-index-size.png)
 
+## Never, ever create index on updated_at (AI generated)
+
+The standard `UPDATE` mechanism carries a significant performance cost, especially on tables with many indexes. A single row update requires inserting a new heap tuple, deleting the old one, and for each of the N indexes on the table, deleting the old index entry and inserting a new one. This results in a massive write amplification of 2N+1 physical writes for one logical update.
+
+To mitigate this, PostgreSQL employs a critical optimization called Heap-Only Tuples (HOT). A HOT update is possible when an `UPDATE` operation does not modify any columns that are part of any index on the table. Under these conditions, PostgreSQL can perform a much more efficient update:
+
+- A new version of the tuple is created, just like a normal update.
+- Crucially, this new tuple version is placed on the same data page as the old version, provided there is sufficient free space.
+- Instead of updating any indexes, the system creates a redirect pointer. The [t_ctid](https://www.postgresql.org/docs/current/ddl-system-columns.html#DDL-SYSTEM-COLUMNS-CTID) field of the old tuple version is updated to point directly to the new tuple version on the same page.   
+
+This creates a "HOT chain" on the page. When an index scan lands on the original tuple version, the database engine follows the `t_ctid` chain to the current, live version. The benefit is immense: the 2N expensive index write operations are completely avoided. This transforms the performance characteristics of `UPDATE`s, making schema design—specifically, the choice of which columns to index—a critical factor in write performance. A common performance anti-pattern is to index a frequently updated column (e.g., a `updated_at` field), as doing so completely disables the HOT optimization for that table, potentially degrading UPDATE performance by an order of magnitude.
+
 ## Conclusion
 
 In this post, we have explored some tips and tricks for designing and operating database systems more effectively and easily. Use them with caution and always consider the trade-offs involved in each approach.
