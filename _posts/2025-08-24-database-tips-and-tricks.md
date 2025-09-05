@@ -236,7 +236,7 @@ And you know what? The index sizes are nearly equal to the size of the table. Le
 
 The standard `UPDATE` mechanism carries a significant performance cost, especially on tables with many indexes. A single row update requires inserting a new heap tuple, deleting the old one, and for each of the N indexes on the table, deleting the old index entry and inserting a new one. This results in a massive write amplification of 2N+1 physical writes for one logical update.
 
-To mitigate this, PostgreSQL employs a critical optimization called Heap-Only Tuples (HOT). A HOT update is possible when an `UPDATE` operation does not modify any columns that are part of any index on the table. Under these conditions, PostgreSQL can perform a much more efficient update:
+To mitigate this, PostgreSQL employs a critical optimization called **Heap-Only Tuples** (HOT). A HOT update is possible when an `UPDATE` operation does not modify any columns that are part of any index on the table. Under these conditions, PostgreSQL can perform a much more efficient update:
 
 - A new version of the tuple is created, just like a normal update.
 - Crucially, this new tuple version is placed on the same data page as the old version, provided there is sufficient free space.
