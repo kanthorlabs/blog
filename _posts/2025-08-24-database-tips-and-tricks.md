@@ -170,8 +170,6 @@ Planning Time: 0.056 ms                                                         
 Execution Time: 16.127 ms                                                                                                              |
 ```
 
-After all, combined index
-
 ## Bitwise operation column
 
 When you need to store multiple boolean flags in a single column, you can use bitwise operations on an integer column as in the following example.
