@@ -63,7 +63,7 @@ And you know what? They show **different** sizes at `~8MB` for 1 million rows. F
 
 ## Make your ID column cluster naturally
 
-Why would you choose auto-incrementing IDs or UUID v4 when you have a better choice? Look at my article [The ID chosen](./2023-03-11-the-id-chosen.md) to get more details on why you should use Lexicographically Sortable Identifiers (LSIDs) like ULID or UUID v7.
+Why would you choose auto-incrementing IDs or UUID v4 when you have a better choice? Look at my article [The ID chosen](/posts/the-id-chosen/) to get more details on why you should use Lexicographically Sortable Identifiers (LSIDs) like ULID or UUID v7.
 
 The most beneficial aspect of using LSIDs is that they are naturally ordered, which can improve query performance and reduce fragmentation. This is especially important for large tables that you often do time-range queries on. For example, a transaction table in a finance system or a webhook event table in an event-driven architecture.
 
