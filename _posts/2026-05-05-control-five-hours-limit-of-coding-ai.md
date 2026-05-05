@@ -34,3 +34,5 @@ There are many ways to schedule this, but I'm too lazy to do anything complex, s
 Here is a screenshot of my setup:
 
 ![claude-code-routine-setup](/assets/img/2026-05-claude-code-routine-setup.png)
+
+Enjoy your coding sessions without worrying about the Five Hours Limit!
