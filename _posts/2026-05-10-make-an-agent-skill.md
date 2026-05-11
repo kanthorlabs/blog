@@ -126,3 +126,5 @@ There is an example of the skill I made this way: the `feature-testgencase` skil
 ```
 
 The initial output is just one file, `SKILL.md`, and the validation script. But the file is too big, so I had to ask the LLM to split it into multiple files, and make a few modifications to make it more accurate and enhance the skill operation. Then the final version is what you see above.
+
+Note: I cannot share more details about the content of the skill, because it contains some confidential information, but I hope you can get the idea of how I make an Agent Skill with high accuracy by just cloning what I have done before.
