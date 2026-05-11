@@ -5,6 +5,8 @@ categories: [Techtalk]
 tags: [ai]
 ---
 
+TL;DR: To make an Agent Skill, you start a conversation with AI, do exactly what you do in daily work, do ask and answer with the AI, and at the end, summarize everything into a markdown file (with scripting if needed) and use it as the Agent Skill. The accuracy of the skill is very high, because you are just cloning what you have done before, and the AI is just helping you to write it down in a more structured way.
+
 After trying some ways to make Agent Skill for both work and personal projects, I found a simple way to do it with high accuracy: just clone what you have done to become the Agent Skill, then invoke it when you need it again.
 
 ## The problem
