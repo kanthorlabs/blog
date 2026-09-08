@@ -16,6 +16,14 @@ So that the struggle to manage work does not just appear suddently, you will fac
 
 Now, let's scale that kind of workload to 10x, and boom, you are facing the same challenge with AI Agents management. It's worth, because no matter how powerful the AI agents are, they still need human oversight, coordination, and decision-making to ensure the work aligns with the overall goals and quality standards.
 
+**LLM vs Human:**
+
+Opus can do a real engineer work because it can remmeber the branch content. If you ask for something, later you ask for another thing in the same session, it remmeber and deliver work in an appropriate order.
+
+GPT-family models, in another hand, put significant focus on recent task you have provided in the current session, then you will feal it's stupid, but it does not. Tibo's tweet already mentiond it, he said GPT models and Codex has been developed with the use of sub-agent, one is orchestrating the overall workflow while the other handles specific tasks. That why they need model focus on a single task intensively.
+
+An Engineer Manager is the one who need to know what is pros and cons of different folks so that they can assign tasks effectively, leverage individual strengths, and provide appropriate guidance and support where needed. Like human, we need to onboard  our agents, give them enough context and guidance to perform their tasks
+
 Same challenge, different scale. Same pain, different actors.
 
 ## The loss of reviewing
