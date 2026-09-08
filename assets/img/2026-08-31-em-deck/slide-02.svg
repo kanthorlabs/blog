@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    svg {
+      --ink: #182b40;
+      --muted: #536579;
+      --line: #7b8da0;
+      --surface: #edf2f6;
+      --paper: #ffffff;
+      --accent: #006e69;
+      --accent-soft: #d6efea;
+      --warn: #ad442c;
+      --warn-soft: #fbe5dd;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --ink: #edf3fa;
+        --muted: #b1c1d3;
+        --line: #8196ad;
+        --surface: #202e40;
+        --paper: #152233;
+        --accent: #68ded0;
+        --accent-soft: #183e40;
+        --warn: #ffac8f;
+        --warn-soft: #482c2b;
+      }
+    }
+    text { fill: var(--ink); }
+    .headline { font-size: 48px; font-weight: 750; letter-spacing: -1.6px; }
+    .label { font-size: 22px; font-weight: 600; }
+    .code { font-size: 20px; font-weight: 500; }
+  </style>
+  <text x="64" y="105" class="headline" text-anchor="start" style="fill: var(--ink)">We do not program anymore. We manage.</text>
+  <rect x="64" y="207" width="552" height="442" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="664" y="207" width="552" height="442" rx="16" fill="var(--accent-soft)" stroke="none" stroke-width="3"/>
+  <path d="M640 229L640 627" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <rect x="112" y="256" width="456" height="225" rx="16" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="136" y="280" width="408" height="162" rx="8" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="148" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="180" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="212" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="244" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="276" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="308" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="340" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="372" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="404" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="436" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="468" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="500" y="292" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="148" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="180" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="212" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="244" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="276" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="308" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="340" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="372" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="404" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="436" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="468" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="500" y="321" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="148" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="180" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="212" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="244" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="276" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="308" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="340" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="372" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="404" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="436" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="468" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="500" y="350" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="148" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="180" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="212" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="244" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="276" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="308" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="340" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="372" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="404" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="436" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="468" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="500" y="379" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="148" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="180" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="212" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="244" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="276" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="308" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="340" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="372" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="404" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="436" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="468" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="500" y="408" width="24" height="19" rx="4" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="249" y="444" width="180" height="14" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="712" y="256" width="456" height="225" rx="16" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="730" y="274" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(751 301) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M773 294H790" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M773 304H785" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="815" y="274" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(836 301) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M858 294H875" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M858 304H870" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="900" y="274" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(921 301) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M943 294H960" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M943 304H955" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="985" y="274" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1006 301) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1028 294H1045" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1028 304H1040" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="1070" y="274" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1091 301) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1113 294H1130" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1113 304H1125" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="730" y="338" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(751 365) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M773 358H790" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M773 368H785" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="815" y="338" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(836 365) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M858 358H875" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M858 368H870" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="900" y="338" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(921 365) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M943 358H960" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M943 368H955" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="985" y="338" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1006 365) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1028 358H1045" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1028 368H1040" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="1070" y="338" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1091 365) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1113 358H1130" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1113 368H1125" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="730" y="402" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(751 429) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M773 422H790" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M773 432H785" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="815" y="402" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(836 429) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M858 422H875" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M858 432H870" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="900" y="402" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(921 429) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M943 422H960" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M943 432H955" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="985" y="402" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1006 429) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1028 422H1045" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1028 432H1040" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <rect x="1070" y="402" width="72" height="51" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1091 429) scale(0.37)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M1113 422H1130" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M1113 432H1125" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M218 646L230 556Q211 532 225 512L254 474Q262 463 272 474L260 502L260 437Q260 423 272 427L284 478L299 437Q310 426 318 439L310 502Q330 531 302 559L305 646" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M462 646L450 556Q469 532 455 512L426 474Q418 463 408 474L420 502L420 437Q420 423 408 427L396 478L381 437Q370 426 362 439L370 502Q350 531 378 559L375 646" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M222 605L303 616" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <path d="M377 616L458 605" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <path d="M818 646L830 556Q811 532 825 512L854 474Q862 463 872 474L860 502L860 437Q860 423 872 427L884 478L899 437Q910 426 918 439L910 502Q930 531 902 559L905 646" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M1062 646L1050 556Q1069 532 1055 512L1026 474Q1018 463 1008 474L1020 502L1020 437Q1020 423 1008 427L996 478L981 437Q970 426 962 439L970 502Q950 531 978 559L975 646" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M822 605L903 616" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <path d="M977 616L1058 605" fill="none" stroke="var(--line)" stroke-width="2"/>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    svg {
+      --ink: #182b40;
+      --muted: #536579;
+      --line: #7b8da0;
+      --surface: #edf2f6;
+      --paper: #ffffff;
+      --accent: #006e69;
+      --accent-soft: #d6efea;
+      --warn: #ad442c;
+      --warn-soft: #fbe5dd;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --ink: #edf3fa;
+        --muted: #b1c1d3;
+        --line: #8196ad;
+        --surface: #202e40;
+        --paper: #152233;
+        --accent: #68ded0;
+        --accent-soft: #183e40;
+        --warn: #ffac8f;
+        --warn-soft: #482c2b;
+      }
+    }
+    text { fill: var(--ink); }
+    .headline { font-size: 48px; font-weight: 750; letter-spacing: -1.6px; }
+    .label { font-size: 22px; font-weight: 600; }
+    .code { font-size: 20px; font-weight: 500; }
+  </style>
+  <text x="64" y="93" class="headline"><tspan x="64" dy="0">New feature: split, then assert. </tspan><tspan x="64" dy="58">Change: highlight, then assert.</tspan></text>
+  <rect x="64" y="213" width="552" height="453" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="664" y="213" width="552" height="453" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="130" y="247" width="420" height="50" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <text x="340" y="280" class="label" text-anchor="middle" style="fill: var(--ink)">overview</text>
+  <path d="M340 297L340 320" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M346.0 310.0L340 320L334.0 310.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="130" y="329" width="420" height="50" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <text x="340" y="362" class="label" text-anchor="middle" style="fill: var(--ink)">approve</text>
+  <path d="M158 354l6 6 12-14" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M340 379L340 402" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M346.0 392.0L340 402L334.0 392.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="130" y="411" width="420" height="50" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <text x="340" y="444" class="label" text-anchor="middle" style="fill: var(--ink)">split</text>
+  <path d="M340 461L340 484" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M346.0 474.0L340 484L334.0 474.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="130" y="493" width="420" height="50" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <text x="340" y="526" class="label" text-anchor="middle" style="fill: var(--ink)">detailed diagrams</text>
+  <path d="M340 543L340 576" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M346.0 566.0L340 576L334.0 566.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="130" y="585" width="420" height="50" rx="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+  <text x="340" y="618" class="label" text-anchor="middle" style="fill: var(--ink)">assert every step</text>
+  <path d="M270 461V478H230V493M410 461V478H450V493" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M230 543V565H340M450 543V565H340" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <rect x="730" y="247" width="420" height="50" rx="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+  <text x="940" y="280" class="label" text-anchor="middle" style="fill: var(--ink)">highlight changes</text>
+  <path d="M940 297L940 399" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M946.0 389.0L940 399L934.0 389.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="730" y="411" width="420" height="50" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <text x="940" y="444" class="label" text-anchor="middle" style="fill: var(--ink)">approve</text>
+  <path d="M758 436l6 6 12-14" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M940 461L940 573" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <path d="M946.0 563.0L940 573L934.0 563.0" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="730" y="585" width="420" height="50" rx="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+  <text x="940" y="618" class="label" text-anchor="middle" style="fill: var(--ink)">assert changed steps</text>
+</svg>

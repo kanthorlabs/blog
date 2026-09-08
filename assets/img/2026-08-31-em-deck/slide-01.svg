@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    svg {
+      --ink: #182b40;
+      --muted: #536579;
+      --line: #7b8da0;
+      --surface: #edf2f6;
+      --paper: #ffffff;
+      --accent: #006e69;
+      --accent-soft: #d6efea;
+      --warn: #ad442c;
+      --warn-soft: #fbe5dd;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --ink: #edf3fa;
+        --muted: #b1c1d3;
+        --line: #8196ad;
+        --surface: #202e40;
+        --paper: #152233;
+        --accent: #68ded0;
+        --accent-soft: #183e40;
+        --warn: #ffac8f;
+        --warn-soft: #482c2b;
+      }
+    }
+    text { fill: var(--ink); }
+    .headline { font-size: 48px; font-weight: 750; letter-spacing: -1.6px; }
+    .label { font-size: 22px; font-weight: 600; }
+    .code { font-size: 20px; font-weight: 500; }
+  </style>
+  <text x="64" y="93" class="headline"><tspan x="64" dy="0">Everybody will become an </tspan><tspan x="64" dy="58">Engineering Manager, soon.</tspan></text>
+  <path d="M640 459Q417 365 195 295" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q504 310 368 240" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q640 305 640 235" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q776 310 912 240" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q862 365 1085 295" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q397 545 155 475" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q882 545 1125 475" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q490 664 340 594" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <path d="M640 459Q790 664 940 594" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 9"/>
+  <circle cx="195" cy="295" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(195 295) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="368" cy="240" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(368 240) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="640" cy="235" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(640 235) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="912" cy="240" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(912 240) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="1085" cy="295" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1085 295) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="155" cy="475" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(155 475) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="1125" cy="475" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(1125 475) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="340" cy="594" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(340 594) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <circle cx="940" cy="594" r="51" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(940 594) scale(0.86)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M475 636Q640 660 805 636" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <g transform="translate(640 405) scale(1.7)">
+    <circle cx="0" cy="-22" r="15" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <path d="M-27 35V16Q-27 1-12 1H12Q27 1 27 16V35Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <path d="M-12 20L-12 35" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <path d="M12 20L12 35" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <rect x="550" y="464" width="180" height="107" rx="16" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="566" y="480" width="148" height="73" rx="8" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <g transform="translate(640 518) scale(0.57)">
+    <path d="M0 -33L0 -25" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="0" cy="-37" r="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+    <rect x="-24" y="-25" width="48" height="39" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="-9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <circle cx="9" cy="-7" r="2" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M-12 27H12M-18 35H18M-30-13V2M30-13V2" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  </g>
+  <path d="M532 572H748M484 584H796M508 584V640M772 584V640" fill="none" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M593 427L554 491M687 427L726 491" fill="none" stroke="var(--ink)" stroke-width="3"/>
+</svg>

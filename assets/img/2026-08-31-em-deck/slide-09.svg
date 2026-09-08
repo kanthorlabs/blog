@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    svg {
+      --ink: #182b40;
+      --muted: #536579;
+      --line: #7b8da0;
+      --surface: #edf2f6;
+      --paper: #ffffff;
+      --accent: #006e69;
+      --accent-soft: #d6efea;
+      --warn: #ad442c;
+      --warn-soft: #fbe5dd;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --ink: #edf3fa;
+        --muted: #b1c1d3;
+        --line: #8196ad;
+        --surface: #202e40;
+        --paper: #152233;
+        --accent: #68ded0;
+        --accent-soft: #183e40;
+        --warn: #ffac8f;
+        --warn-soft: #482c2b;
+      }
+    }
+    text { fill: var(--ink); }
+    .headline { font-size: 48px; font-weight: 750; letter-spacing: -1.6px; }
+    .label { font-size: 22px; font-weight: 600; }
+    .code { font-size: 20px; font-weight: 500; }
+  </style>
+  <text x="64" y="105" class="headline" text-anchor="start" style="fill: var(--ink)">Drift -&gt; more review -&gt; dependency risk.</text>
+  <rect x="64" y="218" width="330" height="267" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="475" y="218" width="330" height="267" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <rect x="886" y="218" width="330" height="267" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <path d="M412 353H455" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <path d="M445.0 347.0L455 353L445.0 359.0" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <path d="M823 353H866" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <path d="M856.0 347.0L866 353L856.0 359.0" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <rect x="93" y="244" width="221" height="64" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <path d="M112 265H280" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M112 285H260" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M112 308v16l21-16" fill="none" stroke="var(--line)" stroke-width="2"/>
+  <rect x="132" y="340" width="232" height="99" rx="16" fill="var(--paper)" stroke="var(--warn)" stroke-width="3"/>
+  <path d="M153 365h31l10-9 19 20 17-9h43l12 9 19-16h33M153 394h18l13 9 22-18 21 17 23-7h22l18 10 19-20 24 10" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <path d="M332 439v16l-21-16" fill="none" stroke="var(--warn)" stroke-width="2"/>
+  <rect x="505" y="246" width="156" height="167" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <rect x="524" y="265" width="156" height="167" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <path d="M542 290H549" fill="none" stroke="var(--warn)" stroke-width="2"/>
+  <path d="M559 290H636.4" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 307H549" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M559 307H610.44" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 324H549" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M559 324H649.38" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 341H549" fill="none" stroke="var(--warn)" stroke-width="2"/>
+  <path d="M559 341H621.06" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 358H549" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M559 358H592.74" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 375H549" fill="none" stroke="var(--accent)" stroke-width="2"/>
+  <path d="M559 375H631.6800000000001" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M542 392H549" fill="none" stroke="var(--warn)" stroke-width="2"/>
+  <path d="M559 392H606.9" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <circle cx="688" cy="367" r="57" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M727 408L767 448" fill="none" stroke="var(--ink)" stroke-width="4"/>
+  <path d="M663 347h40M663 364h32M663 381h42" fill="none" stroke="var(--muted)" stroke-width="3"/>
+  <path d="M691 399l6 6 12-14" fill="none" stroke="var(--accent)" stroke-width="3"/>
+  <rect x="1060" y="255" width="119" height="173" rx="16" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="1078" y="275" width="83" height="25" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="1078" y="316" width="83" height="25" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <rect x="1078" y="357" width="83" height="25" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+  <path d="M1024 355H1060" fill="none" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="918" y="330" width="66" height="30" rx="15" fill="none" stroke="var(--ink)" stroke-width="3"/>
+  <rect x="952" y="344" width="67" height="30" rx="15" fill="none" stroke="var(--ink)" stroke-width="3"/>
+  <path d="M977 390V374a22 22 0 0 1 44 0v16" fill="none" stroke="var(--warn)" stroke-width="3"/>
+  <rect x="965" y="390" width="68" height="56" rx="8" fill="var(--warn-soft)" stroke="var(--warn)" stroke-width="3"/>
+  <circle cx="999" cy="414" r="4" fill="var(--warn)" stroke="var(--warn)" stroke-width="2"/>
+  <path d="M999 418L999 429" fill="none" stroke="var(--warn)" stroke-width="2"/>
+  <rect x="64" y="533" width="1152" height="113" rx="16" fill="var(--paper)" stroke="var(--line)" stroke-width="3"/>
+  <rect x="86" y="564" width="244" height="50" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <text x="208.0" y="597" class="label" text-anchor="middle" style="fill: var(--ink)">Opus response</text>
+  <rect x="375" y="564" width="126" height="50" rx="16" fill="var(--accent-soft)" stroke="none" stroke-width="3"/>
+  <text x="438.0" y="597" class="label" text-anchor="middle" style="fill: var(--ink)">hook</text>
+  <rect x="546" y="564" width="395" height="50" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <text x="743.5" y="597" class="label" text-anchor="middle" style="fill: var(--ink)">GPT-5.6-luna rephrase</text>
+  <rect x="986" y="564" width="208" height="50" rx="16" fill="var(--surface)" stroke="none" stroke-width="3"/>
+  <text x="1090.0" y="597" class="label" text-anchor="middle" style="fill: var(--ink)">me</text>
+  <path d="M340 589H365" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M355.0 583.0L365 589L355.0 595.0" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M511 589H536" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M526.0 583.0L536 589L526.0 595.0" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M951 589H976" fill="none" stroke="var(--muted)" stroke-width="2"/>
+  <path d="M966.0 583.0L976 589L966.0 595.0" fill="none" stroke="var(--muted)" stroke-width="2"/>
+</svg>
