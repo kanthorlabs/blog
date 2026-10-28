@@ -8,7 +8,7 @@ tags: [ai, agents, evaluation]
 > **Disclaimer:** Claude Code, an AI coding agent, wrote this post from our working session. Tuan Nguyen directed the work but did not write the text. Read it with caution, and check each number and claim against the eval set before you rely on it.
 {: .prompt-warning }
 
-**TL;DR**: I cut my `/explain` agent skill from 267 lines to 192 lines. Before the cut, I built an eval of 30 cases that measures what the skill is for, not what the skill says. The shorter skill scores 0.877 against 0.716 on the main cases, and 0.889 against 0.785 on holdout cases that the editor never saw.
+**TL;DR**: I cut my `/explain` agent skill from 267 lines to 192 lines. Before the cut, I built an eval of 30 cases that measures what the skill is for, not what the skill says. Over two runs each, the shorter skill scores 0.872 against 0.716 on the main cases, and 0.856 against 0.785 on holdout cases that the editor never saw.
 
 ## The skill
 
@@ -107,17 +107,19 @@ A separate agent read the reports and wrote the candidate. The rules for it were
 
 It deleted the `Do not` list, because every item repeated a rule from another section. It deleted the trigger list, which the skill description already holds. It merged four rules about the fixed timeline into one sentence. It also added a few lines that target repeated failures: read the files before any message, call a fact unverified only after a search, rank the option that removes the root cause above a guard against the symptom, and treat an option that the user proposed like any other option.
 
+Both columns pool two runs with 3 repeats each:
+
 | Measure | 267-line skill | 192-line skill |
 | --- | --- | --- |
-| Total | 0.716 | 0.877 |
+| Total | 0.716 | 0.872 |
 | M1 Right decision | 0.861 | 1.000 |
-| M2 True facts | 0.702 | 0.833 |
-| M3 No follow-up | 0.567 | 0.756 |
-| M4 Understanding | 0.821 | 0.929 |
-| M5 Answerable close | 0.679 | 0.929 |
-| M7 Valid alternative | 0.682 | 0.818 |
+| M2 True facts | 0.702 | 0.881 |
+| M3 No follow-up | 0.567 | 0.789 |
+| M4 Understanding | 0.821 | 0.917 |
+| M5 Answerable close | 0.679 | 0.905 |
+| M7 Valid alternative | 0.682 | 0.727 |
 
-The skill went from 2200 words to 1638. The messages went from 402 words to 393 on average.
+The skill went from 2200 words to 1638. The messages went from 402 words to 389 on average.
 
 ## The holdout
 
@@ -125,12 +127,12 @@ The agent that wrote the candidate read the answer keys. Part of the gain can fi
 
 | Measure | 267-line skill | 192-line skill |
 | --- | --- | --- |
-| Total | 0.785 | 0.889 |
-| M2 True facts | 0.833 | 0.972 |
-| M3 No follow-up | 0.736 | 0.833 |
-| M5 Answerable close | 0.833 | 0.972 |
+| Total | 0.785 | 0.856 |
+| M2 True facts | 0.833 | 0.944 |
+| M3 No follow-up | 0.736 | 0.778 |
+| M5 Answerable close | 0.833 | 0.931 |
 | M7 Valid alternative | 0.652 | 0.636 |
-| MF Factual answer | 0.250 | 0.833 |
+| MF Factual answer | 0.250 | 0.750 |
 
 The gain holds. The holdout also found two things that the main set missed. First, the old skill put the full template on one-line factual questions: a simple "which Node version does CI use" got a four-step timeline. Second, alternatives did not improve. M7 is flat and it is still the weakest measure.
 
@@ -138,8 +140,8 @@ The gain holds. The holdout also found two things that the main set missed. Firs
 
 - **Write the goal as one sentence before the first test.** My first eval set was large, mechanical and wrong. The goal sentence turned 299 checks into 7 measures.
 - **Run a control.** Without the empty-skill run, I would not know that the model makes the right decision 75% of the time on its own. The skill earns its lines on the close and the facts.
-- **Measure the noise before you set the bar.** Two baseline runs differed by 0.042. A bar narrower than the noise fails good candidates.
+- **Measure the noise before you set the bar.** Two baseline runs differed by 0.042. A bar narrower than the noise fails good candidates. I saw it happen: with one stored run as the baseline, the 192-line skill failed against itself on the holdout, 0.824 against 0.889. Two baseline runs fixed that.
 - **Keep a holdout from the editor.** The agent that edits the skill must not grade on the same keys that it read.
 - **The eval has limits.** The generator, the reader and the grader are the same model family. The keys are one author's judgment. Only 6 of 30 cases are hard enough that the model fails without the skill, and I invoke `/explain` only for hard decisions. That is the next gap to close.
 
-The eval set lives next to the skill in [kanthorlabs/dotagents](https://github.com/kanthorlabs/dotagents/tree/main/evals/explain). When I change the skill, I run it again and compare against the stored baseline.
+The eval set lives next to the skill in [kanthorlabs/dotagents](https://github.com/kanthorlabs/dotagents/tree/main/evals). The shared scripts are in `evals/harness/`, and each skill gets its own suite directory, so the next skill only needs cases and a grader. When I change a skill, I run its suite again and compare against the two stored baseline runs.
