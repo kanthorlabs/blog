@@ -136,12 +136,34 @@ The agent that wrote the candidate read the answer keys. Part of the gain can fi
 
 The gain holds. The holdout also found two things that the main set missed. First, the old skill put the full template on one-line factual questions: a simple "which Node version does CI use" got a four-step timeline. Second, alternatives did not improve. M7 is flat and it is still the weakest measure.
 
+## Same skill, a larger model
+
+Next, I ran the 192-line skill with Opus at medium effort as the generator. The reader and the grader stayed on Sonnet, so the scores compare directly. Each column of Sonnet pools two runs, and each column of Opus is one run, all with 3 repeats.
+
+| Measure | Sonnet `cases` | Opus `cases` | Sonnet holdout | Opus holdout |
+| --- | --- | --- | --- | --- |
+| Total | 0.872 | 0.827 | 0.856 | 0.861 |
+| M1 Right decision | 1.000 | 0.972 | 0.970 | 0.909 |
+| M2 True facts | 0.881 | 0.762 | 0.944 | 0.889 |
+| M3 No follow-up | 0.789 | 0.800 | 0.778 | 0.917 |
+| M4 Understanding | 0.917 | 0.881 | 0.889 | 0.861 |
+| M5 Answerable close | 0.905 | 0.905 | 0.931 | 0.917 |
+| M7 Valid alternative | 0.727 | 0.697 | 0.636 | 0.636 |
+| MF Factual answer | 1.000 | 0.000 | 0.750 | 1.000 |
+| M6 mean words | 389 | 468 | 421 | 500 |
+| Generation cost per run | 1.67 USD | 3.77 USD | 1.86 USD | 4.52 USD |
+
+The MF score of 0.000 on `cases` is a defect of the eval, not of Opus. My global gitignore holds `**/*.env`. Git did not commit the two `.env` files of the factual case. Opus got an empty directory, said so, and asked for the path. That is the correct answer. Without that case, Opus scores 0.837 on `cases` against 0.871 for Sonnet. That is inside the acceptance margin.
+
+The larger model did not make better rulings. It closed with fewer follow-up questions on the holdout, but it lost points on M2. Most of its M2 fails are hedges such as "Unverified: X", when a file in the fixture settles X. Opus wrote about twice as many of these hedges per run as Sonnet. Its messages were 20% longer, and the generation cost 2.2 to 2.4 times more. For this skill, Sonnet stays the generator.
+
 ## What I take away
 
 - **Write the goal as one sentence before the first test.** My first eval set was large, mechanical and wrong. The goal sentence turned 299 checks into 7 measures.
 - **Run a control.** Without the empty-skill run, I would not know that the model makes the right decision 75% of the time on its own. The skill earns its lines on the close and the facts.
 - **Measure the noise before you set the bar.** Two baseline runs differed by 0.042. A bar narrower than the noise fails good candidates. I saw it happen: with one stored run as the baseline, the 192-line skill failed against itself on the holdout, 0.824 against 0.889. Two baseline runs fixed that.
 - **Keep a holdout from the editor.** The agent that edits the skill must not grade on the same keys that it read.
+- **A larger model is not a free gain.** Opus did not beat Sonnet on this skill. It cost more than twice as much and wrote longer messages.
 - **The eval has limits.** The generator, the reader and the grader are the same model family. The keys are one author's judgment. Only 6 of 30 cases are hard enough that the model fails without the skill, and I invoke `/explain` only for hard decisions. That is the next gap to close.
 
 The eval set lives next to the skill in [kanthorlabs/dotagents](https://github.com/kanthorlabs/dotagents/tree/main/evals). The shared scripts are in `evals/harness/`, and each skill gets its own suite directory, so the next skill only needs cases and a grader. When I change a skill, I run its suite again and compare against the two stored baseline runs.
