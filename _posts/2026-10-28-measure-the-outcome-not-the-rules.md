@@ -144,16 +144,16 @@ On the main cases:
 
 | Measure | Sonnet medium | Opus medium | Opus high |
 | --- | --- | --- | --- |
-| Total | 0.872 | 0.840 | 0.864 |
+| Total | 0.872 | 0.852 | 0.864 |
 | M1 Right decision | 1.000 | 0.972 | 0.972 |
 | M2 True facts | 0.881 | 0.762 | 0.833 |
-| M3 No follow-up | 0.789 | 0.800 | 0.778 |
+| M3 No follow-up | 0.789 | 0.822 | 0.822 |
 | M4 Understanding | 0.917 | 0.881 | 0.905 |
-| M5 Answerable close | 0.905 | 0.905 | 0.881 |
-| M7 Valid alternative | 0.727 | 0.697 | 0.818 |
+| M5 Answerable close | 0.905 | 0.929 | 0.857 |
+| M7 Valid alternative | 0.727 | 0.727 | 0.788 |
 | MF Factual answer | 1.000 | 1.000 | 1.000 |
-| M6 mean words | 389 | 465 | 472 |
-| Generation cost per run | 1.67 USD | 3.78 USD | 4.80 USD |
+| M6 mean words | 389 | 463 | 472 |
+| Generation cost per run | 1.67 USD | 3.81 USD | 4.80 USD |
 
 On the holdout cases:
 
@@ -172,7 +172,7 @@ On the holdout cases:
 
 All four Opus runs pass the acceptance rule against the Sonnet baselines. None of them is better than Sonnet by more than the noise.
 
-The first Opus run found a defect in the eval. My global gitignore holds `**/*.env`, so git did not commit the two `.env` files of the factual case. Opus got an empty directory, said so, and asked for the path. That is the correct answer, but it failed MF. I restored the files and generated that case again. The tables show the corrected values.
+The first Opus run found a defect in the eval. My global gitignore holds `**/*.env`, so git did not commit the `.env` files of two cases: the factual case and the allowlist case. The Sonnet baselines ran from a checkout that still had them. In the factual case, Opus got an empty directory, said so, and asked for the path. That is the correct answer, but it failed MF. Each affected case now stores its ignored files in a `fixture.json`, and the harness writes them into the workspace before each run. No `.env` file goes into git. I generated both cases again. The tables show the corrected values.
 
 The larger model did not make better rulings. It closed with fewer follow-up questions on the holdout, but it lost points on M2. Most of its M2 fails are hedges such as "Unverified: X", when a file in the fixture settles X. Opus wrote about twice as many of these hedges per run as Sonnet. High effort recovered part of M2 and gave the best M7 on the main cases, but M7 stayed flat on the holdout. Opus messages were 20% longer. Generation cost 2.3 to 3.2 times more. For this skill, Sonnet stays the generator.
 
