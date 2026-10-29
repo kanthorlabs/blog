@@ -138,24 +138,43 @@ The gain holds. The holdout also found two things that the main set missed. Firs
 
 ## Same skill, a larger model
 
-Next, I ran the 192-line skill with Opus at medium effort as the generator. The reader and the grader stayed on Sonnet, so the scores compare directly. Each column of Sonnet pools two runs, and each column of Opus is one run, all with 3 repeats.
+Next, I ran the 192-line skill with Opus as the generator, once at medium effort and once at high effort. The reader and the grader stayed on Sonnet, so the scores compare directly. Each Sonnet value pools two runs. Each Opus value is one run. All runs have 3 repeats.
 
-| Measure | Sonnet `cases` | Opus `cases` | Sonnet holdout | Opus holdout |
-| --- | --- | --- | --- | --- |
-| Total | 0.872 | 0.827 | 0.856 | 0.861 |
-| M1 Right decision | 1.000 | 0.972 | 0.970 | 0.909 |
-| M2 True facts | 0.881 | 0.762 | 0.944 | 0.889 |
-| M3 No follow-up | 0.789 | 0.800 | 0.778 | 0.917 |
-| M4 Understanding | 0.917 | 0.881 | 0.889 | 0.861 |
-| M5 Answerable close | 0.905 | 0.905 | 0.931 | 0.917 |
-| M7 Valid alternative | 0.727 | 0.697 | 0.636 | 0.636 |
-| MF Factual answer | 1.000 | 0.000 | 0.750 | 1.000 |
-| M6 mean words | 389 | 468 | 421 | 500 |
-| Generation cost per run | 1.67 USD | 3.77 USD | 1.86 USD | 4.52 USD |
+On the main cases:
 
-The MF score of 0.000 on `cases` is a defect of the eval, not of Opus. My global gitignore holds `**/*.env`. Git did not commit the two `.env` files of the factual case. Opus got an empty directory, said so, and asked for the path. That is the correct answer. Without that case, Opus scores 0.837 on `cases` against 0.871 for Sonnet. That is inside the acceptance margin.
+| Measure | Sonnet medium | Opus medium | Opus high |
+| --- | --- | --- | --- |
+| Total | 0.872 | 0.840 | 0.864 |
+| M1 Right decision | 1.000 | 0.972 | 0.972 |
+| M2 True facts | 0.881 | 0.762 | 0.833 |
+| M3 No follow-up | 0.789 | 0.800 | 0.778 |
+| M4 Understanding | 0.917 | 0.881 | 0.905 |
+| M5 Answerable close | 0.905 | 0.905 | 0.881 |
+| M7 Valid alternative | 0.727 | 0.697 | 0.818 |
+| MF Factual answer | 1.000 | 1.000 | 1.000 |
+| M6 mean words | 389 | 465 | 472 |
+| Generation cost per run | 1.67 USD | 3.78 USD | 4.80 USD |
 
-The larger model did not make better rulings. It closed with fewer follow-up questions on the holdout, but it lost points on M2. Most of its M2 fails are hedges such as "Unverified: X", when a file in the fixture settles X. Opus wrote about twice as many of these hedges per run as Sonnet. Its messages were 20% longer, and the generation cost 2.2 to 2.4 times more. For this skill, Sonnet stays the generator.
+On the holdout cases:
+
+| Measure | Sonnet medium | Opus medium | Opus high |
+| --- | --- | --- | --- |
+| Total | 0.856 | 0.861 | 0.847 |
+| M1 Right decision | 0.970 | 0.909 | 0.879 |
+| M2 True facts | 0.944 | 0.889 | 0.889 |
+| M3 No follow-up | 0.778 | 0.917 | 0.889 |
+| M4 Understanding | 0.889 | 0.861 | 0.889 |
+| M5 Answerable close | 0.931 | 0.917 | 0.889 |
+| M7 Valid alternative | 0.636 | 0.636 | 0.636 |
+| MF Factual answer | 0.750 | 1.000 | 0.833 |
+| M6 mean words | 421 | 500 | 520 |
+| Generation cost per run | 1.86 USD | 4.52 USD | 5.88 USD |
+
+All four Opus runs pass the acceptance rule against the Sonnet baselines. None of them is better than Sonnet by more than the noise.
+
+The first Opus run found a defect in the eval. My global gitignore holds `**/*.env`, so git did not commit the two `.env` files of the factual case. Opus got an empty directory, said so, and asked for the path. That is the correct answer, but it failed MF. I restored the files and generated that case again. The tables show the corrected values.
+
+The larger model did not make better rulings. It closed with fewer follow-up questions on the holdout, but it lost points on M2. Most of its M2 fails are hedges such as "Unverified: X", when a file in the fixture settles X. Opus wrote about twice as many of these hedges per run as Sonnet. High effort recovered part of M2 and gave the best M7 on the main cases, but M7 stayed flat on the holdout. Opus messages were 20% longer. Generation cost 2.3 to 3.2 times more. For this skill, Sonnet stays the generator.
 
 ## What I take away
 
