@@ -5,10 +5,10 @@ categories: [Techtalk]
 tags: [ai, agents, evaluation]
 ---
 
+**TL;DR**: I cut my `/explain` agent skill from 267 lines to 192 lines. Before the cut, I built an eval of 30 cases that measures what the skill is for, not what the skill says. Over two runs each, the shorter skill scores 0.872 against 0.716 on the main cases, and 0.856 against 0.785 on holdout cases that the editor never saw.
+
 > **Disclaimer:** Claude Code, an AI coding agent, wrote this post from our working session. Tuan Nguyen directed the work but did not write the text. Read it with caution, and check each number and claim against the eval set before you rely on it.
 {: .prompt-warning }
-
-**TL;DR**: I cut my `/explain` agent skill from 267 lines to 192 lines. Before the cut, I built an eval of 30 cases that measures what the skill is for, not what the skill says. Over two runs each, the shorter skill scores 0.872 against 0.716 on the main cases, and 0.856 against 0.785 on holdout cases that the editor never saw.
 
 ## The skill
 
